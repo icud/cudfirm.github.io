@@ -1,0 +1,1110 @@
+
+
+<style>
+/* Designed By One of The Athletes For The Academy */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merienda One', Georgia, serif;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+     -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10+ and Edge */
+  user-select: none; /* Standard syntax */
+}
+body{
+    position:relative;
+    height:auto;
+    width:100%;
+    overflow-x:hidden;
+}
+
+article.htb {
+  writing-mode: horizontal-tb; 
+}
+article.vrl {
+  writing-mode: vertical-rl; 
+}
+span.vrl {
+  writing-mode: vertical-rl; 
+}
+
+/* Image CSS */
+img {
+  border: 2px solid #303e45; /* Dark grey border */
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 100%; /* Set a small width */
+}
+
+/* Add a hover effect (grey shadow) */
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(172, 172, 172);
+}
+.sec1{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(https://cdn.wapka.org/0071od/5a4b85e17ed324d7cd8d92e7712fdca4/openshelf.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg{
+    position: fixed;
+    top: 0;
+    left: -140%;
+    height: 100%;
+    width: 100%;
+    background: #303e45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skew(-10deg);
+    transition: .5s;
+    box-shadow: 0 0 20rem #000;
+    z-index: 201;
+}
+.bg.active{
+    left: -40%;
+}
+.bg .navigation{
+    position: relative;
+    transform: translateX(13rem) translateY(-5rem);
+}
+.bg .navigation ul{
+    list-style-type: none;
+}
+.bg .navigation ul li{
+    position: relative;
+    margin: 3rem 0;
+    transition: .5s;
+}
+.bg .navigation ul li a{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    transition: .5s;
+}
+.bg .navigation ul li a:hover{
+    color: rgb(102, 89, 216);
+    transform: translateX(4rem);
+}
+.bg .navigation ul li:hover{
+    transform: translateX(4rem);
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 200;
+    background: transparent;
+    transition: .5s;
+}
+.nav.sticky{
+    background: teal;
+    padding:2rem;
+    box-shadow: 1rem 1rem 3rem #000;
+}
+.nav h2{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: .2rem;
+}
+.nav .navBar ul{
+    display: flex;
+}
+.nav .navBar ul li{
+    list-style: none;
+    margin: 0 2rem;
+}
+.nav .navBar ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+/* Original Image BARS */
+.nav .menu{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background: #008080;
+    box-shadow: 0 0rem 1rem #000;
+    z-index: 1000;
+    visibility: visible;
+    display: inline-block;
+    cursor: pointer;
+    transition:.3s;
+    z-index: 300;
+}
+
+/* CUD solution to BARS */
+.nav .menu span{
+     position: relative;
+     height: 100%;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: #fff;
+     font-size: 3rem;
+}
+
+/* active navigation effects */
+
+.nav .menu.active:before{
+    content: 'x';
+    top: 14px; 
+    right: 32px;
+    display: flex; 
+    position: fixed;
+    font-size: 4rem; 
+    font-weight: 700;
+    color: red; 
+    justify-content: center;
+    align-items: center;
+    border: solid 2px darkred;
+    border-radius: 50%;
+    width: 6.35rem;
+    height: 6.35rem;
+    z-index: 2001;
+    background: #303e45;
+    
+   /* background: url(https://cdn.wapka.org/003b25/58c8148bc23f4109b6c0222feec7cfe3/cudclose.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+
+/* Close for the sticky bar */
+.nav.sticky .menu.active:before{
+    content: 'x';
+    top: 9%; 
+    right: 4.4%;
+    position: absolute;
+    background: #ffffff; 
+    border:solid 3px #303e45;
+    color: red;
+}
+
+.context{
+    position: absolute;
+    left: 10%;
+    color: #fff;
+    max-width: 60rem;
+}
+.context h2{
+    font-size: 5rem;
+    margin: 0;
+}
+.context h1{
+    font-size: 8rem;
+    margin: 0;
+    padding: 0;
+}
+.context h4{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+.context a{
+    background: teal;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-weight: 700;
+}
+
+/*about us section*/
+.sec2{
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(214, 213, 213);
+    overflow: hidden;
+    overflow-x:hidden ;
+    padding: 4rem;
+
+}
+.sec2 .head{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 4rem;
+    color: #fff;
+    box-shadow: 0 .5rem 1rem #777;
+    padding: 2rem;
+    background: teal;
+}
+.sec2 .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: teal;
+    flex-wrap: wrap;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+.sec2 .container .content{
+    max-width: 45%;
+    height: 40rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    padding: 2rem;
+    margin: 2rem;
+}
+.sec2 .container .image1{
+    max-width: 50%;
+    height: 40rem;
+}
+.sec2 .container .image1 img{
+    max-width: 100%;
+    height: 100%;
+}
+.sec2 .container .content h2{
+    font-size: 3rem;
+}
+.sec2 .container .content p{
+    font-size: 1.5rem;
+}
+.sec2 .container .content p{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+/*about us section finished*/
+
+/*----our discipline section-----*/
+.sec3{
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background: #000;
+    overflow: hidden;
+    padding: 3rem;
+}
+.sec3 .head{
+    color: #fff;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.sec3 .info{
+    color: #fff;
+    font-size: 1.4rem;
+}
+.sec3 .container{
+    position: relative;
+    height: auto;
+    width: 100%;
+    display:flex;
+    grid-template-columns: repeat(auto-fill,minmax(40rem,1fr));
+    grid-template-rows: minmax(10rem,auto);
+    margin: 3rem;
+    grid-auto-flow: dense;
+    grid-gap: 1rem;
+}
+.sec3 .container .box{
+    display: flex;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+    background: #333;
+    padding: 2rem;
+    transition: .5s;
+}
+.sec3 .container .box:hover{
+    background:rgb(72, 117, 241);
+}
+.sec3 .container .box img{
+    filter:invert(1);
+    width: 7rem;
+}
+.sec3 .container .box h2{
+    margin: 1rem 0;
+}
+/*---- our discipline section-----*/
+
+
+
+/*----our partners section-----*/
+.sec4{
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow:hidden ;
+}
+.sec4 .head{
+    color:rgb(72, 117, 241) ;
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+.sec4 .info{
+    font-size: 1.5rem;
+}
+.sec4 .container{
+    position: relative;
+    width: 100%;
+  /*  display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(50rem,1fr));
+    grid-template-rows: minmax(40rem,auto);
+    margin: 4rem;
+    grid-auto-flow: dense;
+    grid-gap: 2rem; */
+    margin-top: 5rem;
+}
+.sec4 .container .box{
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: solid 2px #303e45;
+    border-radius: 50%;
+}
+.sec4 .container .box img{
+    width: 100%;
+    transform: scale(1.2);
+    transition: .5s;
+    border: solid 2px #303e45;
+    border-radius: 50%;
+}
+.sec4 .container .box:hover img{
+    transform: scale(1);
+    border: solid 2px #303e45;
+    border-radius: 50%;
+}
+/*----!our partners section-----*/
+
+/*-------our testimonial section---------*/
+.sec5{
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 8rem;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(238, 238, 238);
+    overflow:hidden ;
+}
+.sec5 .container{
+    position: relative;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+}
+.sec5 .head{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: rgb(72, 117, 241);
+}
+.sec5 .info{
+    font-size: 1.5rem;
+}
+.sec5 .container .box{
+    max-width: 45%;
+    margin: 2rem;
+    padding: 3rem 2rem;
+    background: teal;
+    font-size: 1.6rem;
+    color: #fff;
+    border: dotted 2px #303e45;
+    border-radius: 7px;
+}
+.sec5 .container .box .lower{
+    width: 100%;
+    text-align: right;
+    margin-top: 3rem;
+}
+/*-------our testimonial section---------*/
+
+
+/*------contact Me section-----------*/
+.sec6{
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #000;
+}
+.sec6 .head{
+    color: #fff;
+    font-size: 5rem;
+}
+.sec6 .info{
+    color: #fff;
+    font-size: 1.4rem;
+}
+.sec6 .container{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sec6 .container .box{
+    max-width: 50%;
+    margin: 2rem;
+    color: #fff;
+}
+.sec6 .container .box1 h2{
+    font-size: 2rem;
+}
+.sec6 .container .box1 .book{
+    margin: 2rem 0;
+}
+.sec6 .container .box1 .book .page1 i{
+    color: rgb(126, 158, 247);
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+.sec6 .container .box1 .book .page1 span{
+    font-size: 2rem;
+}
+.sec6 .container .box1 .book .page2{
+    text-align:center;
+}
+.sec6 .container .box2{
+    width: 60rem;
+}
+.sec6 .container .box2 form{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.sec6 .container .box2 form input{
+    width: 100%;
+    height: 3rem;
+    border: none;
+    outline: none;
+    background: none;
+    background: #333;
+    margin: 1rem;
+    text-align: center;
+    color: #777;
+}
+.sec6 .container .box2 form .message{
+    height: 10rem;
+}
+.sec6 .container .box2 form button{
+    background: none;
+    outline: none;
+    border: none;
+    background:rgb(95, 121, 238);
+    color: #fff;
+    padding: 2rem 3rem;
+}
+.sec6 .container .box2 form h2{
+    font-size: 2rem;
+}
+/*------!contact Me section-----------*/
+
+
+
+/*-----media query works here------*/
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .sec2 .container .content {
+        max-width: 80%;
+    }
+    .sec2 .container .image1 {
+        max-width: 100%;
+    }
+    .sec5 .container .box {
+        max-width: 80%;
+    }
+    .sec3 .container{
+        grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
+        grid-template-rows: minmax(auto,auto);
+    }
+    .sec4 .container{
+        grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
+        grid-template-rows: minmax(auto,auto);
+    }
+    .sec2 .container .content {
+        margin: 2rem 0;
+        max-width: 50%;
+    }
+}
+@media(max-width:768px){
+    html{
+        font-size: 45%;
+    }
+}
+@media(max-width:650px){
+    html{
+        font-size: 45%;
+    }
+    .nav .menu{
+        display: inline-block;
+    }
+    .nav .navBar ul {
+        display: none;
+    }
+    .sec6 .container {
+        flex-direction: column;
+    }
+    .sec6 .container .box {
+        max-width: 100%;
+    }
+    .sec2 .container .content {
+        max-width: 100%;
+    }
+    .sec5 .container {
+        width: 100%;
+    }
+    .sec4 .head {
+        font-size: 4rem;
+    }
+    .sec2 .container {
+        width: 100%;
+    }
+    .sec2 .container .content {
+        margin: 2rem 0;
+    }
+    .sec5 {
+        padding: 2rem;
+    }
+    .sec4 .head {
+        font-size: 3.5rem;
+    }
+    .nav.sticky {
+        width: 95%;
+    }
+    .sec3 {
+        padding: 1rem;
+    }
+}
+</style>
+
+
+<!DOCTYPE html>
+ <html lang="en">
+  <head>
+   <title>Home Page - Arena Athletics Academy</title>
+
+<!-- Meta Section -->
+
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="HandheldFriendly" content="true">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+
+<!-- For SEO Optimization -->
+  <meta name="description" content="Arena Athletics Academy - The Best Athletics Academy Based In Nigeria, With External Branches In The U. S and U. K">
+
+  <meta name="keywords" content="Arena Athletics Academy - Track, Sprinter, Sprinting, Quarter Miler, Field, Long Jump, Triple Jump, Jumper,  Hurdles, Hurdler, AFN, Nigeria Sports">
+
+
+<!-- Item Prop -->
+
+  <meta itemprop="image" content="https://img.wapka.org/0034za.png">
+
+  <meta itemprop="name" content="Arena Athletics Academy - Track, Sprinter, Sprinting, Quarter Miler, Field, Long Jump, Triple Jump, Jumper,  Hurdles, Hurdler, AFN, Nigeria Sports">
+
+
+<!-- OG Section -->
+
+  <meta property="og:url" content="http://arena.wapka.club">
+
+  <meta property="og:image" content="https://img.wapka.org/0034za.png">
+
+  <meta property="og:type" content="website">
+
+  <meta property="og:title" content="Arena - Athletics Academy">
+
+  <meta property="og:description" content="Arena Athletics Academy - The Best Athletics Academy Based In Nigeria, With External Branches In The U. S and U. K">
+
+
+
+<!-- Twitter Meta -->
+
+<meta name="twitter:image" content="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arena - Athletics Academy">
+
+<meta name="twitter:description" content="Arena Athletics Academy - The Best Athletics Academy Based In Nigeria, With External Branches In The U. S and U. K">
+
+
+<!-- Link Rel Section -->
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Diplomata"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome By Bootstrap Disabled For Some Time <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+
+<script src="https://kit.fontawesome.com/92b6da3a8f.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdn.wapka.org/0034d4/eff59b3c4b2e81ba84f3e3c11ba0d5f2/cutibed-blue-grey.css">
+ 
+<!-- AOS Section CSS -->
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<!-- <link rel="stylesheet" href="https://cdn.wapka.org/0038zd/6bb5545318038a2cfb38a19581c581f9/cudaos.css" /> -->
+
+
+<!-- Script Section -->
+
+<!-- Jquery from Google CDN loads pages faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!--- Main Section-->
+    <section class="sec1">
+<div class="bg">
+ <div class="navigation">
+   <ul>
+     <li><a href="/athletes.html">
+  Athletes
+     </a></li>
+     <li><a href="/coaches.html">
+  Coaches</a></li>
+      <li><a href="/gallery.html">
+  Gallery</a></li>
+       <li><a href="/programs.html">
+  Programs</a></li>
+       <li><a href="/forum.html">
+  Forum</a></li>
+       <li><a href="/about.html">
+  About Us</a></li>
+        </ul>
+       </div>
+      </div>
+
+        <div class="nav">
+            <h2>CUDFIRM</h2>
+            <div class="navBar">
+                <ul>
+                    <li>
+                        <a href="/athletes.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="/coaches.html">Coaches</a>
+                    </li>
+                    <li>
+                        <a href="/gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="/programs.html">Programs</a>
+                    </li>
+                    <li>
+                        <a href="/forum.html">Forum</a>
+                    </li>
+                    <li>
+                        <a href="/about.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+          <div class="menu" onclick="togglemenu()"><span>
+<i class="fas fa-bars" style="font-size:3rem;"></i></span></div>
+        </div>
+
+        <div class="context">
+            <h2>Chapmanship</h2>
+            <h1>Service</h1>
+            <h4>If It Can Be Imagined, Then It Can Be Made Touchable. </h4>
+            <a href="/partners.html">Partner With Us</a>
+        </div>
+    </section>
+    <!---!main section-->
+
+
+    <!--about us section-->
+    <section class="sec2" id="about">
+        <h2 class="head">About Us</h2>
+        <div class="container">
+            <div class="content one" data-aos="fade-right" data-aos-offset="250" data-aos-duration="1000" style="height:auto;">
+                <h2>Arena Athletics Academy</h2>
+                <p>This Is A Sports Academy Discovering and Nurturing Young Budding Athletes Into Godly World Class Responsible Athletic Champions.<br/>
+
+<p> We Are Aimed At Identifying and Grooming Future Stars Into World Beaters.</p>
+<p> On The Path To Re-enact The Past Glory of Nigeria's Athletics.</p>
+
+ We Nurture Grassroot Talents In Track and Field, Not Excluding Football...
+</p>
+                <p>A Better Way of Being Technical, Functional, Consciously Crafted With Drills.
+
+As A Result of Good Programming of The Athletes To Perform Effortlessly, Ready To Explore and Be At The Top For Long, Is To Learn and Master The Basics....
+<br/>
+<br/>
+
+<a href="/about.html" style="margin:10px; border:solid 2px #303e45; border-radius: 5px; padding: 3px 5px;"><span style="align-content:flex-end; background: teal; color: white; border:solid 2px white; border-radius: 5px; padding: 5px 10px; margin: 2px;">Read More</span></a>
+</p>
+   </div>
+
+            <div class="image1 one" data-aos="fade-left" data-aos-offset="250" data-aos-duration="1000">
+                <img src="https://img.wapka.org/0039a5.jpeg">
+            </div>
+        </div>
+    </section>
+    <!--!about us section-->
+
+
+
+    <!-- Our Discipline Section -->
+
+    <section class="sec3" id="services">
+        <h2 class="head">WHAT WE DO</h2>
+        <p class="info">WE ARE SPECIALISTS IN WHAT WE DO.</p>
+        <div class="container row2">
+            <div class="box column2" data-aos="flip-left" data-aos-offset="250" data-aos-duration="1000">
+                <div class="content">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/exercise.png" alt="Sprint" style="background: teal; color: white;"/>
+                    <a href="/ssprint.html"><h2>HOME CONSTRUCTION</h2></a>
+                    <p>This Covers The One Hundred Meters <b style="background-color:white;color:black;">100m</b>, The Two Hundred Meters <b style="background-color:white;color:black;">200m</b>, Not Excluding The Short Dash "Sixty Meters" <b style="background-color:white;color:black;">60m</b> (Indoor) Sprint. Developing Speed, Speed Endurance and Most Importantly The Perfect Running  Techniques... </p>
+                </div>
+            </div>
+
+
+            <div class="box column2" data-aos="flip-right" data-aos-offset="250" data-aos-duration="1000">
+                <div class="content">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/track-and-field.png" alt="Q.mile" style="background: teal; color: white;"/>
+                    <a href="/lsprint.html"><h2>BUILDING REMODELS</h2></a>
+                    <p>The Actual Speed Endurance Event. Where Technique Is Touchable, To Finish Strong. This Event Comprises of The Four Hundred Meters <b style="background-color:white;color:black;">400m</b> and The Eight Hundred Meters <b style="background-color:white;color:black;">800m</b> Respectively.</p>
+                </div>
+            </div>
+</div>
+
+<div class="container row">
+            <div class="box column2" data-aos="flip-up" data-aos-offset="250" data-aos-duration="1000">
+                <div class="content">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/long-jump.png" atl="L.Jump" style="background: teal; color: white;"/>
+                    <a href="/ljump.html"><h2>INTERIOR DESIGN</h2></a>
+                    <p>An Event In Which Athletes Combine Speed, Strength and Agility In An Attempt To Leap As Far As Possible From A Take Off Point. To Cover A Targeted Distance. This Is Also Known As The "Horizontal Jump". A Very Technical Event Comprising of Phases. </p>
+                </div>
+            </div>
+
+            <div class="box column2" data-aos="flip-down" data-aos-offset="250" data-aos-duration="1000">
+                <div class="content">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/base-jumping.png" alt="T.Jump" style="background: teal; color: white;"/>
+                    <a href="/tjump.html"><h2>EXTERIOR DESIGN</h2></a>
+                    <p>Also Known As Horizontal Jump, A Little Different From The Long Jump. The Process Is To..... Well we will fill the following later, we will need a little time to update this part of the page. So, Just Hold On A Little Bit.</p>
+                </div>
+            </div>
+</div>
+
+<div class="container row">
+            <div class="box column2" data-aos="fade-right" data-aos-offset="250" data-aos-duration="1000">
+                <div class="content" >
+                   <img src="https://img.icons8.com/glyph-neue/64/000000/track-and-field.png" alt="Hurdles" style="background: teal; color: white;"/>
+                    <a href="/hurdles.html"><h2>RENOVATION</h2></a>
+                    <p>Information about this event will be uploaded soon and with precised details. Loading up loading up loading up loading up loading up loading up loading up loading up loading up loading. Keep waiting, All Processes To Become Visible Soon.</p>
+                </div>
+            </div>
+
+            <div class="box column2" data-aos="fade-left" data-aos-offset="250" data-aos-duration="1000">
+                <div class="content">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/treadmill.png" alt="Fitness" style="background: teal; color: white;"/>
+                    <a href="/gfitness.html"><h2>SAFETY MANAGEMENT</h2></a>
+                    <p>Keeping fit through all forms of exercises and diets as a given lists. Discipline, dedication, focus, patience and persistence in doing the right thing the right way to stay alive and healthy. Uploading the complete info soon. Just Hold On A Little Longer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- our Discipline Section Ends -->
+
+
+
+
+    <!-- Our Partners and Sponsors Section -->
+<style>
+   .column {
+       float: left; 
+       width: 16.66%;
+}
+
+   .row:after {
+       content: "";
+       display: table; 
+       clear: both; 
+}
+
+/* Second Column */
+   .column2 {
+       float: left; 
+       width: 50%;
+}
+
+   .row2:after {
+       content: "";
+       display: table; 
+       clear: both; 
+}
+table {
+     width: 100%; 
+     justify-content: center; 
+} 
+
+th { width: 100%;
+     display: table; 
+     clear: both; 
+     justify-content: space-around;
+     align-content: center; 
+     box-sizing: border-box;
+}
+</style>
+
+    <section class="sec4" id="work" style="padding:5px;">
+        <h2 class="head" style="padding-right:2px; padding-left:2px; margin-left:1px; margin-right:1px;">
+            Our Partners
+        </h2>
+
+   <p class="info">
+Our Partners and Supporters That Aids The Growth and Development of The Academy/Club.
+   </p>
+
+        <div class="container" style="margin="5px;">
+<table border="1" width="99%">
+  <tr>
+    <td width="100%" class="w3-theme-l4">
+  <div class="row" style="margin-bottom:12px;">
+<u>
+<div style="justify-content:left;">
+<h2>Our Supporters</h2>
+</div>
+</u>
+<br/>
+
+<!-- A -->
+            <div class="box column" data-aos="fade-up" data-aos-offset="250" data-aos-duration="1000" style="border:solid 2px #303e45; border-radius:50%;">
+<a href="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" target="_blank"><img src="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" alt="NameA1" style="height:100%; width:100%;"></a>
+            </div>
+
+<!-- B -->
+            <div class="box column" data-aos="fade-down" data-aos-offset="250" data-aos-duration="1000" style="border:solid 2px #303e45; border-radius:50%;">
+<a href="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" target="_blank"><img src="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" alt="NameA2" style="height:100%; width:100%;"></a>
+            </div>
+
+<!-- C -->
+            <div class="box column" data-aos="fade-right" data-aos-offset="250" data-aos-duration="1000" style="border:solid 2px #303e45; border-radius:50%;">
+<a href="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" target="_blank"><img src="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" alt="NameA3" style="height:100%; width:100%;"></a>
+            </div>
+
+<!-- D -->
+            <div class="box column" data-aos="fade-left" data-aos-offset="250" data-aos-duration="1000" style="border:solid 2px #303e45; border-radius:50%;">
+<a href="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" target="_blank"><img src="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" alt="NameA4" style="height:100%; width:100%;"></a>
+            </div>
+
+<!-- E -->
+        <div class="box column" data-aos="fade-up" data-aos-offset="250" data-aos-duration="1000" style="border:solid 2px #303e45; border-radius:50%;">
+<a href="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" target="_blank"><img src="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" alt="NameA1" style="height:100%; width:100%;"></a>
+            </div>
+
+<!-- F -->
+            <div class="box column" data-aos="fade-down" data-aos-offset="250" data-aos-duration="1000" style="border:solid 2px #303e45; border-radius:50%;">
+<a href="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" target="_blank"><img src="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" alt="NameA2" style="height:100%; width:100%;"></a>
+            </div>
+</div>
+</td>
+</tr>
+<tr>
+<td width="100%" class="w3-theme-l3">
+
+<!-- The Major Sponsors -->
+
+          <div class="row" style="margin-top:12px;">
+
+<!-- 1 -->
+            <div class="box column" data-aos="zoom-in-down" data-aos-offset="250" data-aos-duration="1000" style="border:solid 2px #303e45; border-radius:50%;">
+<a href="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" target="_blank"><img src="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" alt="NameB1" style="height:100%; width:100%;"></a>
+            </div>
+
+<!-- 2 -->
+            <div class="box column"  data-aos="zoom-in-left" data-aos-offset="250" data-aos-duration="1000" style="border:solid 2px #303e45; border-radius:50%;">
+<a href="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" target="_blank"><img src="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" alt="NameB2" style="height:100%; width:100%;"></a>
+            </div>
+
+<!-- 3 -->
+            <div class="box column" data-aos="zoom-in-left" data-aos-offset="250" data-aos-duration="1000" style="border:solid 2px #303e45; border-radius:50%;">
+ <a href="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" target="_blank"><img src="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" alt="NameB3" style="height:100%; width:100%;"></a>
+ </div>
+
+<!-- 4 -->
+            <div class="box column" data-aos="zoom-in-down" data-aos-offset="250" data-aos-duration="1000" style="border:solid 2px #303e45; border-radius:50%;">
+<a href="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" target="_blank"><img src="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" alt="NameB4" style="height:100%; width:100%;"></a>
+            </div>
+
+<!-- 5 -->
+            <div class="box column" data-aos="zoom-in-down" data-aos-offset="250" data-aos-duration="1000" style="border:solid 2px #303e45; border-radius:50%;">
+<a href="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" target="_blank"><img src="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" alt="NameB1" style="height:100%; width:100%;"></a>
+            </div>
+
+<!-- 6 -->
+            <div class="box column"  data-aos="zoom-in-left" data-aos-offset="250" data-aos-duration="1000" style="border:solid 2px #303e45; border-radius:50%;">
+<a href="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" target="_blank"><img src="https://cdn.wapka.org/0039a5/2b6dca9d55725a9732950a370132b912/nophoto.jpeg" alt="NameB2" style="height:100%; width:100%;"></a>
+            </div>
+</div>
+        </div>
+</td>
+</tr>
+</table>
+    </section>
+    <!-- Our Partners and Sponsors Section -->
+
+
+
+
+    <!-- Testimonials Section -->
+    <section class="sec5" id="testimonials">
+        <h2 class="head">Testimonials</h2>
+        <p class="info">A Brief Insights Given By Some of The Pioneers of Arena Athletics Academy, On The Growth and Development of The Nation's Sports Sector.</p>
+        <div class="container">
+            <div class="box" data-aos="flip-left" data-aos-offset="250" data-aos-duration="1000">
+                <div class="upper">
+                    Arena Athletics Is Borne Out of Our Passion To Put Nigeria Back To Reckoning In Athletics Through A Well Planned and Sustainable Programme.
+<br/>
+<br/>
+
+ Arena Athletics Academy Is Already Finalising Partnership With Foreign Athletics Clubs, Where Its Students Can Go For International Exposure.
+                </div>
+                <div class="lower">
+                    <h2>Mr. Iyere</h2>
+                    <h4>Director</h4>
+                </div>
+            </div>
+            <div class="box" data-aos="flip-right" data-aos-offset="250" data-aos-duration="1000">
+                <div class="upper">
+                    Nigeria has progressively lost its athletics glory in the last decades, due to lack of attention through the development of athletes.
+<br/>
+<br/>
+
+We no longer put up strong performances in the global scene, who have reached or passed their peak. 
+<br/>
+ For this course, <a href="/index.html">Arena Athletics Academy</a> Was Created To Close All The Gaps.. 
+                </div>
+                <div class="lower">
+                    <h2>Coach Olu Sule</h2>
+                    <h4>Head Coach (Jumps)</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----!our testimonial section------->
+
+
+
+
+    <!------contact us section--------->
+    <section class="sec6" data-aos="fade-right" data-aos-offset="250" data-aos-duration="1000" id="contact">
+        <h2 class="head">Contact Us</h2>
+        <p class="info">If You Have Any Question, Suggestions or Complain To Make. You Can Reach Us Via Classified Medias and Platforms.</p>
+        <div class="container">
+            <div class="box1 box" data-aos="flip-left" data-aos-offset="250" data-aos-duration="1000">
+                <h2>Contact Info</h2>
+                <div class="book">
+                    <div class="page1">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i><span>Address</span>
+                    </div>
+                    <div class="page2">
+                        Yaba College of Technology <br>
+                        Onikan, Lagos <br>
+                        Nigeria
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="page1">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i><span>Email</span>
+                    </div>
+                    <div class="page2">
+                        arenaxtra@gmail.com
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="page1">
+                        <i class="fa fa-phone" aria-hidden="true"></i><span>Phone</span>
+                    </div>
+                    <div class="page2">
+                        +2349056317709
+                    </div>
+                </div>
+            </div>
+            <div class="box2 box">
+     <u><h2>Message Us</h2></u>
+<br/>
+ <a href="/contact.html"><button style="background-color:white; color:black; padding:3px; border:solid 2px darkgrey; font-size:16px; font-weight:700; width: 180px; height:auto;" class="btn">Send Message</button></a>
+            </div>
+        </div>
+    </section>
+    <!------!contact us section--------->
+
+
+<!-- Random Script Content -->
+<!-- The AOS JS Section -->
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- <script src="https://cdn.wapka.org/0038ze/aa20b6e0418d20fb86b071e670b2b207/cudaos.js"></script> -->
+
+    <script>
+      AOS.init();
+    </script>
+
+<!-- AOS ends -->
+
+    <script>
+        var menu = document.querySelector('.menu');
+        var bg = document.querySelector('.bg');
+
+        menu.addEventListener('click',function(){
+            bg.classList.toggle('active');
+            menu.classList.toggle('active');
+        })
+    </script>
+    <script>
+        var nav = document.querySelector('.nav');
+        window.addEventListener('scroll',function(){
+            nav.classList.toggle('sticky',window.scrollY>0);
+        })
+    </script>
+</body>
+
+</html>
